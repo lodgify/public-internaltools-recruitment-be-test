@@ -11,7 +11,6 @@
 
 As a team focused on giving tools to our support and marketing teams, we usually need to deal with large amounts of data and external API integrations. 
 
-
 ## The Code
 
 This solution has 3 diferent projects in it. 
@@ -19,10 +18,13 @@ This solution has 3 diferent projects in it.
 * there is also and API project (ExternalContact.Api). This API simulates an external integration where we send our users as contacts so we can use that external tool.
 * Also there is a skeleton test project
 
+### SuperPanel.App
+
+This is a Asp.net core MVC project with one controller that renders all users in a table
 
 ### ExternalContacts.API
 
-This api has just 3 endpoints
+This api has just 4 endpoints
 
 * /v1/contacts (GET): gets a list of all contacts in the external integration
 * /v1/contacts/{email} (GET): gets a specific contact by searching for the email
@@ -44,7 +46,7 @@ b) The External Contacts API is a bit unstable so you may expect random errors a
 
 4. After all this hard work is done, support operators asked to provide some additional way to do a GDPR request for a batch of users. 
 
-a) With the experience of the previous implementation, how you will approach this task. You can answer this in the PR
+a) With the experience of the previous implementation, how you will approach this task. You can answer this in the PR description
 
 b) **Optional** (nice to have): Implement this feature following approach described in a)
 
@@ -53,10 +55,11 @@ b) **Optional** (nice to have): Implement this feature following approach descri
 - How you deal with the existing code, understand it and work with it
 - How you implement new features and understand the requirements (feel free to ask in case of doubts)
 - How you work with MVC, css or js that you need in order to implement your changes. 
+- How you approach the usage of external API's
 - How you test the correctness of your solution
 
 ### Restrictions
 
 - Please do not modify the External API project
 - Besides it changing/adding everything is allowed, feel free to add new projects, libraries etc. - everything what you consider as useful
-- If there is something that you want us to notice in your approach please add a text file describing it
+- If there is something that you want us to notice in your approach please add a text file describing it or do it on the PR request
