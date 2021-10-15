@@ -1,0 +1,7 @@
+ExternalContacts.Api/bin/
+ExternalContacts.Api/obj/
+SuperPanel.App/bin/
+SuperPanel.App/obj/
+SuperPanel.Tests/bin/
+SuperPanel.Tests/obj/
+.vs/
