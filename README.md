@@ -9,7 +9,7 @@
 
 ## Background
 
-As a team focused on giving tools to our support and marketing teams, we usually need to deal with large amounts of data and external API integrations. 
+As a team focused on giving tools to our support and marketing teams, we usually need to deal with external API integrations. 
 
 ## The Code
 
@@ -37,7 +37,7 @@ This api has just 4 endpoints
 
 a) SuperPanel is using Boostrap for convenience, feel free to use its UI features or change to another if you want.
 
-2. We also need to implement a new feature that will make use of and External Contacts API, where we will request for GDPR deletion for a given user/s. To do this you will need to do a HTTP call to the External Contacts API.
+2. We also need to implement a new feature that will allow the SuperPanel operators to do an GDPR deletion request for a given user. In order to do that we will make use of the External Contacts API, described above, where we will request for GDPR deletion for a user/s. To do this we will need to do a HTTP call to the External Contacts API.
 
 a) The user may or may not exists on the External Contacts API, so you might consider this in your implementation
 b) The External Contacts API is a bit unstable so you may expect random errors and it also has a very restrictive rate limiting in place
@@ -47,7 +47,6 @@ b) The External Contacts API is a bit unstable so you may expect random errors a
 4. After all this hard work is done, support operators asked to provide some additional way to do a GDPR request for a batch of users. 
 
 a) With the experience of the previous implementation, how you will approach this task. You can answer this in the PR description
-
 b) **Optional** (nice to have): Implement this feature following approach described in a)
 
 ### What we are looking for
