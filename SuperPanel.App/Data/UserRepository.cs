@@ -10,6 +10,8 @@ namespace SuperPanel.App.Data
     public interface IUserRepository
     {
         IEnumerable<User> QueryAll();
+
+        public int Get_Number_Users();
     }
 
     public class UserRepository : IUserRepository
@@ -24,6 +26,10 @@ namespace SuperPanel.App.Data
                 .ToList();
         }
 
+        public int Get_Number_Users()
+        {
+            return _users.Count();
+        }
         public IEnumerable<User> QueryAll()
         {
             return _users;
