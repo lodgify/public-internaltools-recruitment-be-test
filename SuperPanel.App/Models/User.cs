@@ -20,6 +20,7 @@ namespace SuperPanel.App.Models
         {
             this.Id = id;
         }
+
     }
 
 }

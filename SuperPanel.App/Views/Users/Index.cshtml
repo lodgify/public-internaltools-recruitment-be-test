@@ -24,6 +24,7 @@
             <td>@u.FirstName @u.LastName</td>
             <td>@u.Email</td>
             <td>@u.CreatedAt</td>
+            <td><a asp-action="Delete" asp-route-id="@u.Id">Delete</a></td>
         </tr>
     }
 </table>

@@ -32,6 +32,7 @@ namespace SuperPanel.App
             services.AddOptions();
             services.Configure<DataOptions>(options => Configuration.GetSection("Data").Bind(options));
             services.AddCloudscribePagination();
+            services.AddHttpClient();
 
             // Data
             services.AddSingleton<IUserRepository, UserRepository>();
