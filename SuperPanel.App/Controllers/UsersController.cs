@@ -8,6 +8,7 @@ using System.Net.Http;
 using SuperPanel.App.Models;
 using System;
 using NToastNotify;
+using Microsoft.AspNetCore.Mvc.RazorPages;
 
 namespace SuperPanel.App.Controllers
 {
@@ -17,6 +18,7 @@ namespace SuperPanel.App.Controllers
         private readonly IUserRepository _userRepository;
         private readonly IHttpClientFactory _httpClientFactory;
         private readonly IToastNotification _toastNotification;
+        private static bool startup = true;
         public UsersController(ILogger<UsersController> logger, IUserRepository userRepository,IHttpClientFactory httpClientFactory, IToastNotification toastNotification)
         {
             _logger = logger;
@@ -31,8 +33,9 @@ namespace SuperPanel.App.Controllers
         //    var users = _userRepository.QueryAll();
         //    return View(users);
         //}
-        public IActionResult Index(int id, int pageNumber=1,int pageSize=50)
+        public IActionResult Index(int id, int pageNumber = 1, int pageSize = 50)
         {
+            if (startup) _toastNotification.RemoveAll();
             int excludeRecords = (pageSize * pageNumber) - pageSize;
             var number_users = _userRepository.Get_Number_Users();
             var filtered_users = _userRepository.QueryAll().Skip(excludeRecords).Take(pageSize);
@@ -45,6 +48,7 @@ namespace SuperPanel.App.Controllers
                 PageSize = pageSize
             };
 
+            startup = false;
             return View(result);
         }
 
