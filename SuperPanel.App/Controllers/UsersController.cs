@@ -37,17 +37,8 @@ namespace SuperPanel.App.Controllers
         {
             if (startup) _toastNotification.RemoveAll();
             int excludeRecords = (pageSize * pageNumber) - pageSize;
-            var number_users = _userRepository.Get_Number_Users();
-            var filtered_users = _userRepository.QueryAll().Skip(excludeRecords).Take(pageSize);
-            
-            var result = new PagedResult<Models.User>
-            {
-                Data = filtered_users.ToList(),
-                TotalItems = number_users,
-                PageNumber = pageNumber,
-                PageSize = pageSize
-            };
-
+            var result = _userRepository.Get_FilteredUsers(excludeRecords, pageNumber, pageSize);
+      
             startup = false;
             return View(result);
         }
@@ -78,10 +69,12 @@ namespace SuperPanel.App.Controllers
                 {
                     case 404:
                         _toastNotification.AddErrorToastMessage(OutputMessages.user_not_found);
+                        _logger.LogError(OutputMessages.user_not_found);
                         break;         
                     case 500:
                         redirected_action = "Delete";
-                        _toastNotification.AddWarningToastMessage(OutputMessages.alert_message);                      
+                        _toastNotification.AddWarningToastMessage(OutputMessages.alert_message);
+                        _logger.LogWarning(OutputMessages.alert_message);
                         break;
                     case 200:
                         //Attempt to delete from Contact List
@@ -90,18 +83,22 @@ namespace SuperPanel.App.Controllers
                         {
                             _userRepository.Remove_User(user);
                             _toastNotification.AddSuccessToastMessage(OutputMessages.sucess);
+                            _logger.LogInformation(OutputMessages.sucess);
                         }
                         else if((int)Grdp_response.StatusCode == 500)
                         {
                             redirected_action = "Delete";
                             _toastNotification.AddWarningToastMessage(OutputMessages.alert_message);
+                            _toastNotification.AddWarningToastMessage(OutputMessages.alert_message);
                         }
                         else
                         {
                             _toastNotification.AddErrorToastMessage(OutputMessages.general_error);
+                            _toastNotification.AddErrorToastMessage(OutputMessages.general_error);
                         }
                         break;
                     default:
+                        _toastNotification.AddErrorToastMessage(OutputMessages.general_error);
                         _toastNotification.AddErrorToastMessage(OutputMessages.general_error);
                         break;
                 }
@@ -109,7 +106,7 @@ namespace SuperPanel.App.Controllers
             }
             catch (Exception e)
             {
-                Console.WriteLine(e.Message);
+                _logger.LogError(e.Message);
             }
    
             return RedirectToAction(redirected_action,new {id=id});

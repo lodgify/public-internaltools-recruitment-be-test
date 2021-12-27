@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text.Json;
 using System;
+using cloudscribe.Pagination.Models;
 
 namespace SuperPanel.App.Data
 {
@@ -17,6 +18,8 @@ namespace SuperPanel.App.Data
         public int Get_Number_Users();
 
         public void Remove_User(User user);
+
+        public PagedResult<Models.User> Get_FilteredUsers(int excludeRecords, int pageNumber, int pageSize);
 
     } 
 
@@ -60,5 +63,21 @@ namespace SuperPanel.App.Data
                 Console.WriteLine(e.ToString());
             }
         }
+
+        public PagedResult<User> Get_FilteredUsers(int excludeRecords, int pageNumber, int pageSize)
+        {
+            var filtered_users = QueryAll().Skip(excludeRecords).Take(pageSize);
+
+            var result = new PagedResult<Models.User>
+            {
+                Data = filtered_users.ToList(),
+                TotalItems = Get_Number_Users(),
+                PageNumber = pageNumber,
+                PageSize = pageSize
+            };
+
+            return result;
+        }
+
     }
 }
