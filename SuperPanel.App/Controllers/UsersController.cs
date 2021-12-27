@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using System.Net.Http;
 using SuperPanel.App.Models;
 using System;
+using NToastNotify;
 
 namespace SuperPanel.App.Controllers
 {
@@ -15,20 +16,22 @@ namespace SuperPanel.App.Controllers
         private readonly ILogger<UsersController> _logger;
         private readonly IUserRepository _userRepository;
         private readonly IHttpClientFactory _httpClientFactory;
- 
-        public UsersController(ILogger<UsersController> logger, IUserRepository userRepository,IHttpClientFactory httpClientFactory)
+        private readonly IToastNotification _toastNotification;
+        public UsersController(ILogger<UsersController> logger, IUserRepository userRepository,IHttpClientFactory httpClientFactory, IToastNotification toastNotification)
         {
             _logger = logger;
             _userRepository = userRepository;
             _httpClientFactory = httpClientFactory;
+            _toastNotification = toastNotification;
         }
 
+        //TODO-Delete deprecated code
         //public IActionResult Index2()
         //{
         //    var users = _userRepository.QueryAll();
         //    return View(users);
         //}
-        public IActionResult Index(int pageNumber=1,int pageSize=50)
+        public IActionResult Index(int id, int pageNumber=1,int pageSize=50)
         {
             int excludeRecords = (pageSize * pageNumber) - pageSize;
             var number_users = _userRepository.Get_Number_Users();
@@ -61,38 +64,51 @@ namespace SuperPanel.App.Controllers
             var httpClient = _httpClientFactory.CreateClient();
             var URL = $"http://localhost:61695/v1/contacts/";
             var user = new User(id);
-            var message = "";
-
+            string redirected_action = "Index";
             try
             {
                 //Check if user exists in External Contacts API
                 var response = await httpClient.GetAsync($"{URL}{id}");
 
-                //If user exists, attempt to Anonymize it from Contact List.
-                if (response.IsSuccessStatusCode)
+                switch((int)response.StatusCode)
                 {
-                    var Grdp_response = await httpClient.PutAsJsonAsync($"{URL}{id}/gdpr", user);
-                    if(Grdp_response.IsSuccessStatusCode)
-                    {
-                        message = "Sucessfully deleted User";
-                        _userRepository.Remove_User(user);
-                    }
-                    else
-                    {
-                        message = $"Error while deleting User.Please contact Support.";
-                    }
+                    case 404:
+                        _toastNotification.AddErrorToastMessage(OutputMessages.user_not_found);
+                        break;         
+                    case 500:
+                        redirected_action = "Delete";
+                        _toastNotification.AddWarningToastMessage(OutputMessages.alert_message);                      
+                        break;
+                    case 200:
+                        //Attempt to delete from Contact List
+                        var Grdp_response = await httpClient.PutAsJsonAsync($"{URL}{id}/gdpr", user);
+                        if((int)Grdp_response.StatusCode == 200)
+                        {
+                            _userRepository.Remove_User(user);
+                            _toastNotification.AddSuccessToastMessage(OutputMessages.sucess);
+                        }
+                        else if((int)Grdp_response.StatusCode == 500)
+                        {
+                            redirected_action = "Delete";
+                            _toastNotification.AddWarningToastMessage(OutputMessages.alert_message);
+                        }
+                        else
+                        {
+                            _toastNotification.AddErrorToastMessage(OutputMessages.general_error);
+                        }
+                        break;
+                    default:
+                        _toastNotification.AddErrorToastMessage(OutputMessages.general_error);
+                        break;
                 }
-                else
-                {
-                    message = $"Error while deleting User with Id.Please contact Support.";
-                }
+           
             }
             catch (Exception e)
             {
                 Console.WriteLine(e.Message);
             }
    
-            return RedirectToAction(nameof(Index));
+            return RedirectToAction(redirected_action,new {id=id});
         }
     }
 }
