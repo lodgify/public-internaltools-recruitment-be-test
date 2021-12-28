@@ -1,19 +1,19 @@
 ﻿using cloudscribe.Pagination.Models;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using Moq;
+using Moq.Protected;
 using NToastNotify;
 using SuperPanel.App.Controllers;
 using SuperPanel.App.Data;
 using SuperPanel.App.Infrastructure;
-using SuperPanel.App.Models;
 using System;
-using System.Collections.Generic;
 using System.Linq;
+using System.Net;
 using System.Net.Http;
-using System.Text;
+using System.Threading;
+using System.Threading.Tasks;
 using Xunit;
 
 namespace SuperPanel.Tests
@@ -22,7 +22,6 @@ namespace SuperPanel.Tests
     {
         private readonly UsersController _sut;
         private readonly Mock<ILogger<UsersController>> _loggerMock = new Mock<ILogger<UsersController>>();
-        private readonly Mock<IOptions<DataOptions>> dataOptions = new Mock<IOptions<DataOptions>>();
         private readonly Mock<IUserRepository> _userRepositoryMock = new Mock<IUserRepository>();
         private readonly UserRepository user_repo = new UserRepository(Options.Create<DataOptions>(new DataOptions()
         {
@@ -30,7 +29,7 @@ namespace SuperPanel.Tests
         }));
         private readonly Mock<IHttpClientFactory> _httpClientFactoryMock = new Mock<IHttpClientFactory>();
         private readonly Mock<IToastNotification> _toastNotificationMock = new Mock<IToastNotification>();
-        private readonly Random _random;
+   
 
         public UsersControllerTests()
         {
@@ -53,21 +52,51 @@ namespace SuperPanel.Tests
             Assert.IsType<ViewResult>(view_result);
             var model = Assert.IsAssignableFrom<PagedResult<App.Models.User>>(
         view_result.ViewData.Model);
-            Assert.Equal(model.TotalItems - excluded_files,model.Data.Count());
+            Assert.Equal(50,model.Data.Count());
         }
 
+        /// <summary>
+        /// Method used to mock a HTTPClient object by mocking the HTTPMessageHandler()
+        /// </summary>
+        /// <returns>
+        /// Controller with mocked IHttpClientFactory
+        /// </returns>
+        public UsersController HTTPClientMock()
+        {
+            var mockFactory = new Mock<IHttpClientFactory>();
+            var mockHttpMessageHandler = new Mock<HttpMessageHandler>();
+            mockHttpMessageHandler.Protected()
+                .Setup<Task<HttpResponseMessage>>("SendAsync", ItExpr.IsAny<HttpRequestMessage>(), ItExpr.IsAny<CancellationToken>())
+                .ReturnsAsync(new HttpResponseMessage
+                {
+                    StatusCode = HttpStatusCode.OK,
+                    Content = new StringContent("{'name':SagradaFamilia,'city':'BCN'}"),
+                });
+
+            var client = new HttpClient(mockHttpMessageHandler.Object);
+            mockFactory.Setup(_ => _.CreateClient(It.IsAny<string>())).Returns(client);
+            UsersController controller = new UsersController(_loggerMock.Object, _userRepositoryMock.Object, mockFactory.Object, _toastNotificationMock.Object);
+            return controller;
+        }
 
         [Fact]
 
-        public async Task<IActionResult> DeleteConfirmed_ShouldRedirect_toIndex_WhenNotPossibleToDelete()
+        public async Task DeleteConfirmed_ShouldRedirect_toIndexOrDelete_View_WhenHTTPConnectionPossible()
         {
+            //Arrange
+            var id = 10203;
+            string[] acceptedActions = { "Index", "Delete" };
+            var controller = HTTPClientMock();
 
+            //Act
+            var result = await controller.DeleteConfirmed(id);
+
+            //Assert
+            Assert.NotNull(result);
+            var redirectToActionResult = Assert.IsType<RedirectToActionResult>(result);
+            Assert.True(string.Equals(redirectToActionResult.ActionName, "Index") || string.Equals(redirectToActionResult.ActionName, "Delete"));
+                            
         }
 
-        //[Fact]
-        //public async Task<IActionResult> DeleteConfirmed_ShouldRedirect_toDelete_WhenInternalErrorOccurs()
-        //{
-
-        //}
     }
 }
