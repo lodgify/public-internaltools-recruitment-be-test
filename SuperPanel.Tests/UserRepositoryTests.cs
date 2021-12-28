@@ -1,6 +1,7 @@
 using Microsoft.Extensions.Options;
 using SuperPanel.App.Data;
 using SuperPanel.App.Infrastructure;
+using System;
 using System.Linq;
 using Xunit;
 
@@ -20,5 +21,6 @@ namespace SuperPanel.Tests
 
             Assert.Equal(5000, all.Count());
         }
+
     }
 }

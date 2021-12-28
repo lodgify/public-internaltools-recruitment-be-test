@@ -1,7 +1,9 @@
-﻿@model IEnumerable<User>
+﻿@model cloudscribe.Pagination.Models.PagedResult<User>
 
 @{
     ViewData["Title"] = "User's list";
+    ViewData["Controller"] = "Users";
+    ViewData["Action"] = "Index";
 }
 
 
@@ -15,13 +17,15 @@
             <th>Created at</th>
         </tr>
     </thead>
-    @foreach (var u in Model)
+    @foreach (var u in Model.Data)
     {
         <tr>
             <td>@u.Id</td>
             <td>@u.FirstName @u.LastName</td>
             <td>@u.Email</td>
             <td>@u.CreatedAt</td>
+            <td><a asp-action="Delete" asp-route-id="@u.Id">Delete</a></td>
         </tr>
     }
 </table>
+<partial name="PaginationPartial" view-data="ViewData" model="Model" />

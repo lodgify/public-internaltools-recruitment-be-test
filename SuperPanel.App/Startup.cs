@@ -31,7 +31,10 @@ namespace SuperPanel.App
             services.AddControllersWithViews();
             services.AddOptions();
             services.Configure<DataOptions>(options => Configuration.GetSection("Data").Bind(options));
-
+            //services added for recruitment assignment
+            services.AddCloudscribePagination();
+            services.AddHttpClient();
+            services.AddRazorPages().AddNToastNotifyNoty();
             // Data
             services.AddSingleton<IUserRepository, UserRepository>();
         }
@@ -63,6 +66,9 @@ namespace SuperPanel.App
                     name: "default",
                     pattern: "{controller=Users}/{action=Index}/{id?}");
             });
+
+            app.UseNToastNotify();
+
         }
 
         private void GenerateFakeData()
