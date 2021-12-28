@@ -43,6 +43,13 @@ namespace SuperPanel.App.Controllers
             return View(result);
         }
 
+        /// <summary>
+        /// Queries the user repo the user
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns>
+        /// View of the user returned by the id
+        /// </returns>
         public IActionResult Delete(int id)
         {
             var user = _userRepository.QueryUser(id);
@@ -54,6 +61,15 @@ namespace SuperPanel.App.Controllers
 
             return View(user);
         }
+
+        /// <summary>
+        /// //If the Status Code is 500, either by attempting the GetAsync() or the PutAsJsonAsync(), an internal error occured
+            //due to the instability of the ExternalContactsAPI. Warn the user and suggest an new attempt
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns>
+        /// IActionResult. Either Index or Delete 
+        /// </returns>
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
             var httpClient = _httpClientFactory.CreateClient();
@@ -64,7 +80,7 @@ namespace SuperPanel.App.Controllers
             {
                 //Check if user exists in External Contacts API
                 var response = await httpClient.GetAsync($"{URL}{id}");
-
+            
                 switch((int)response.StatusCode)
                 {
                     case 404:
@@ -89,17 +105,17 @@ namespace SuperPanel.App.Controllers
                         {
                             redirected_action = "Delete";
                             _toastNotification.AddWarningToastMessage(OutputMessages.alert_message);
-                            _toastNotification.AddWarningToastMessage(OutputMessages.alert_message);
+                            _logger.LogWarning(OutputMessages.alert_message);
                         }
                         else
                         {
                             _toastNotification.AddErrorToastMessage(OutputMessages.general_error);
-                            _toastNotification.AddErrorToastMessage(OutputMessages.general_error);
+                            _logger.LogError(OutputMessages.general_error);
                         }
                         break;
                     default:
                         _toastNotification.AddErrorToastMessage(OutputMessages.general_error);
-                        _toastNotification.AddErrorToastMessage(OutputMessages.general_error);
+                        _logger.LogError(OutputMessages.general_error);
                         break;
                 }
            
@@ -107,6 +123,7 @@ namespace SuperPanel.App.Controllers
             catch (Exception e)
             {
                 _logger.LogError(e.Message);
+                return NotFound();              
             }
    
             return RedirectToAction(redirected_action,new {id=id});
