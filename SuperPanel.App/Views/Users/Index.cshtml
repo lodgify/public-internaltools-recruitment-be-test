@@ -1,27 +1,149 @@
-﻿@model IEnumerable<User>
+﻿@using Microsoft.AspNetCore.Http
+@using SuperPanel.App.Data
+@model PaginatedList<SuperPanel.App.Models.User>
 
-@{
-    ViewData["Title"] = "User's list";
-}
+@{ ViewData["Title"] = "User's list"; }
 
+<script src="~/js/signalr/dist/browser/signalr.js"></script>
 
+<script type="text/javascript">
+    function removeAlert() {
+    const alert = document.getElementById('alert')
+    alert.style.display = "block";
+
+    setTimeout(function(){ 
+        alert.style.display = "none";
+
+    }, 5000);
+
+    }
+    window.onload = removeAlert;
+
+</script>
+<script type="text/javascript">
+        stablishConnection((conn) => registerNotificationHandlers(conn));
+
+        function stablishConnection(cb) {
+            let connection = new signalR.HubConnectionBuilder()
+                .withUrl('https://localhost:44363/hub/notificationhub', {
+                    accessTokenFactory: () => {
+                        return "Authorization", getToken();
+                    },
+                    transport: signalR.HttpTransportType.LongPolling
+                })
+                .configureLogging(signalR.LogLevel.Information)
+                .withAutomaticReconnect()
+                .build();
+
+            connection.start().then(function () {
+                console.log('User Registered to Signalr Hub');
+                cb(connection);
+            });
+        }
+
+        function registerNotificationHandlers(connection) {
+            connection.on("DeletedUser", (message) => {
+                //alert(message.userId);
+                var el = document.getElementById(message.userId);
+                if(el !== null){
+                    el.remove();
+                }
+            });
+        }
+
+        function getToken() {
+            return 'dasddasd';
+        }
+
+</script>
+<div>
+    <div id="alert" class="@TempData["AlertType"]" role="alert">
+        <a href="#" class="close" data-dismiss="alert" aria-label="close">×</a>
+        <p>@TempData["AlertMessage"]</p>
+    </div>
+
+    <form asp-action="Index" method="get">
+    <div class="form-actions no-color">
+        <p>
+            Find by name: <input type="text" name="SearchString" value="@ViewData["CurrentFilter"]" />
+            <input type="submit" value="Search" class="btn btn-default" /> |
+            <a asp-action="Index">Back to Full List</a>
+        </p>
+    </div>
+    </form>
+
+</div>
 <table class="table">
 
     <thead>
         <tr>
-            <th>#</th>
-            <th>Name</th>
-            <th>Email</th>
-            <th>Created at</th>
+            <th><input type="submit" form="bulk" value="🗑" name="" class="btn btn-danger" style="font-size:0.75rem!important;"/></th>
+            <th>
+                <a asp-action="Index" asp-route-sortOrder="@ViewData["IdSortParam"]"> 
+                    <i class="fa fa-sort"></i> # </a></th>
+            <th>
+                <a asp-action="Index" asp-route-sortOrder="@ViewData["NameSortParam"]" asp-route-currentFilter="@ViewData["CurrentFilter"]"> 
+                    <i class="fa fa-sort"></i> Name </a></th>
+            <th>
+                <a asp-action="Index" asp-route-sortOrder="@ViewData["EmailSortParam"]" asp-route-currentFilter="@ViewData["CurrentFilter"]"> 
+                    <i class="fa fa-sort"></i> Email </a></th>
+            <th>
+                <a asp-action="Index" asp-route-sortOrder="@ViewData["CreatedAtSortParam"]" asp-route-currentFilter="@ViewData["CurrentFilter"]"> 
+                    <i class="fa fa-sort"></i> Created At </a></th>
+            <th>
         </tr>
     </thead>
+
+    <form asp-action="Index" method="post" id="bulk">
     @foreach (var u in Model)
     {
-        <tr>
-            <td>@u.Id</td>
-            <td>@u.FirstName @u.LastName</td>
-            <td>@u.Email</td>
-            <td>@u.CreatedAt</td>
-        </tr>
+    <tr id=@u.Id>
+        <td class="text-center">
+            <input type="checkbox" name="userIds" value="@u.Id">
+        </td>
+        <td>@u.Id</td>
+        <td>@u.FirstName @u.LastName</td>
+        <td>@u.Email</td>
+        <td>@u.CreatedAt</td>
+        <td>
+
+        </td>
+    </tr>
     }
+    </form>
 </table>
+
+@{
+    var prevDisabled = !Model.HasPreviousPage ? "disabled" : "";
+    var nextDisabled = !Model.HasNextPage ? "disabled" : "";
+}
+
+<a asp-action="Index"
+   asp-route-sortOrder="@ViewData["CurrentSort"]"
+   asp-route-pageNumber="@(Model.PageIndex - 1)"
+   asp-route-currentFilter="@ViewData["CurrentFilter"]"
+   asp-route-pageSize="@ViewData["pageSize"]"
+   class="btn btn-default @prevDisabled">
+    Previous
+</a>
+<a asp-action="Index"
+   asp-route-sortOrder="@ViewData["CurrentSort"]"
+   asp-route-pageNumber="@(Model.PageIndex + 1)"
+   asp-route-currentFilter="@ViewData["CurrentFilter"]"
+   asp-route-pageSize="@ViewData["pageSize"]"
+   class="btn btn-default @nextDisabled">
+    Next
+</a>
+
+@using(Html.BeginForm("Index", "Users", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    @Html.DropDownList("pageSize", new List<SelectListItem>
+    {
+       new SelectListItem{ Text="Select Page Size", Value = ""},
+       new SelectListItem{ Text="50", Value = "50" },
+       new SelectListItem{ Text="100", Value = "100" },
+       new SelectListItem{ Text="All", Value = "1000" }
+    }, "")
+
+    <input type="submit" value="Submit" />
+}

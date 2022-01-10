@@ -34,6 +34,9 @@ namespace SuperPanel.App
 
             // Data
             services.AddSingleton<IUserRepository, UserRepository>();
+
+            services.AddMemoryCache();
+            services.AddSession();
         }
 
 
@@ -56,6 +59,8 @@ namespace SuperPanel.App
             app.UseRouting();
 
             app.UseAuthorization();
+
+            app.UseSession();
 
             app.UseEndpoints(endpoints =>
             {

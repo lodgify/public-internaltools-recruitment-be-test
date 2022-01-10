@@ -19,13 +19,17 @@ namespace SuperPanel.App.Data
         public UserRepository(IOptions<DataOptions> dataOptions)
         {
             // preload the set of users from file.
-            var json = System.IO.File.ReadAllText(dataOptions.Value.JsonFilePath);
+            /*var json = System.IO.File.ReadAllText(dataOptions.Value.JsonFilePath);
             _users = JsonSerializer.Deserialize<IEnumerable<User>>(json)
                 .ToList();
+            */
         }
 
         public IEnumerable<User> QueryAll()
         {
+            var json = System.IO.File.ReadAllText("./../data/users.json");
+            _users = JsonSerializer.Deserialize<IEnumerable<User>>(json)
+                .ToList();
             return _users;
         }
 

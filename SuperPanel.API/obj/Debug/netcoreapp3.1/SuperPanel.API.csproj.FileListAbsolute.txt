@@ -1,0 +1,128 @@
+C:\Users\B8511\OneDrive\Escritorio\paginacion\public-internaltools-recruitment-be-test-main\SuperPanel.API\bin\Debug\netcoreapp3.1\appsettings.Development.json
+C:\Users\B8511\OneDrive\Escritorio\paginacion\public-internaltools-recruitment-be-test-main\SuperPanel.API\bin\Debug\netcoreapp3.1\appsettings.json
+C:\Users\B8511\OneDrive\Escritorio\paginacion\public-internaltools-recruitment-be-test-main\SuperPanel.API\bin\Debug\netcoreapp3.1\SuperPanel.API.exe
+C:\Users\B8511\OneDrive\Escritorio\paginacion\public-internaltools-recruitment-be-test-main\SuperPanel.API\bin\Debug\netcoreapp3.1\SuperPanel.API.deps.json
+C:\Users\B8511\OneDrive\Escritorio\paginacion\public-internaltools-recruitment-be-test-main\SuperPanel.API\bin\Debug\netcoreapp3.1\SuperPanel.API.runtimeconfig.json
+C:\Users\B8511\OneDrive\Escritorio\paginacion\public-internaltools-recruitment-be-test-main\SuperPanel.API\bin\Debug\netcoreapp3.1\SuperPanel.API.runtimeconfig.dev.json
+C:\Users\B8511\OneDrive\Escritorio\paginacion\public-internaltools-recruitment-be-test-main\SuperPanel.API\bin\Debug\netcoreapp3.1\SuperPanel.API.dll
+C:\Users\B8511\OneDrive\Escritorio\paginacion\public-internaltools-recruitment-be-test-main\SuperPanel.API\bin\Debug\netcoreapp3.1\SuperPanel.API.pdb
+C:\Users\B8511\OneDrive\Escritorio\paginacion\public-internaltools-recruitment-be-test-main\SuperPanel.API\bin\Debug\netcoreapp3.1\Mapster.dll
+C:\Users\B8511\OneDrive\Escritorio\paginacion\public-internaltools-recruitment-be-test-main\SuperPanel.API\bin\Debug\netcoreapp3.1\Mapster.Core.dll
+C:\Users\B8511\OneDrive\Escritorio\paginacion\public-internaltools-recruitment-be-test-main\SuperPanel.API\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.dll
+C:\Users\B8511\OneDrive\Escritorio\paginacion\public-internaltools-recruitment-be-test-main\SuperPanel.API\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Users\B8511\OneDrive\Escritorio\paginacion\public-internaltools-recruitment-be-test-main\SuperPanel.API\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.InMemory.dll
+C:\Users\B8511\OneDrive\Escritorio\paginacion\public-internaltools-recruitment-be-test-main\SuperPanel.API\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Caching.Abstractions.dll
+C:\Users\B8511\OneDrive\Escritorio\paginacion\public-internaltools-recruitment-be-test-main\SuperPanel.API\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Caching.Memory.dll
+C:\Users\B8511\OneDrive\Escritorio\paginacion\public-internaltools-recruitment-be-test-main\SuperPanel.API\bin\Debug\netcoreapp3.1\Microsoft.Extensions.DependencyInjection.dll
+C:\Users\B8511\OneDrive\Escritorio\paginacion\public-internaltools-recruitment-be-test-main\SuperPanel.API\bin\Debug\netcoreapp3.1\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\B8511\OneDrive\Escritorio\paginacion\public-internaltools-recruitment-be-test-main\SuperPanel.API\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Logging.dll
+C:\Users\B8511\OneDrive\Escritorio\paginacion\public-internaltools-recruitment-be-test-main\SuperPanel.API\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\B8511\OneDrive\Escritorio\paginacion\public-internaltools-recruitment-be-test-main\SuperPanel.API\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Options.dll
+C:\Users\B8511\OneDrive\Escritorio\paginacion\public-internaltools-recruitment-be-test-main\SuperPanel.API\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Primitives.dll
+C:\Users\B8511\OneDrive\Escritorio\paginacion\public-internaltools-recruitment-be-test-main\SuperPanel.API\bin\Debug\netcoreapp3.1\Microsoft.OpenApi.dll
+C:\Users\B8511\OneDrive\Escritorio\paginacion\public-internaltools-recruitment-be-test-main\SuperPanel.API\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\B8511\OneDrive\Escritorio\paginacion\public-internaltools-recruitment-be-test-main\SuperPanel.API\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\B8511\OneDrive\Escritorio\paginacion\public-internaltools-recruitment-be-test-main\SuperPanel.API\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\B8511\OneDrive\Escritorio\paginacion\public-internaltools-recruitment-be-test-main\SuperPanel.API\bin\Debug\netcoreapp3.1\System.Collections.Immutable.dll
+C:\Users\B8511\OneDrive\Escritorio\paginacion\public-internaltools-recruitment-be-test-main\SuperPanel.API\bin\Debug\netcoreapp3.1\System.ComponentModel.Annotations.dll
+C:\Users\B8511\OneDrive\Escritorio\paginacion\public-internaltools-recruitment-be-test-main\SuperPanel.API\bin\Debug\netcoreapp3.1\System.Diagnostics.DiagnosticSource.dll
+C:\Users\B8511\OneDrive\Escritorio\paginacion\public-internaltools-recruitment-be-test-main\SuperPanel.API\obj\Debug\netcoreapp3.1\SuperPanel.API.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\B8511\OneDrive\Escritorio\paginacion\public-internaltools-recruitment-be-test-main\SuperPanel.API\obj\Debug\netcoreapp3.1\SuperPanel.API.AssemblyInfoInputs.cache
+C:\Users\B8511\OneDrive\Escritorio\paginacion\public-internaltools-recruitment-be-test-main\SuperPanel.API\obj\Debug\netcoreapp3.1\SuperPanel.API.AssemblyInfo.cs
+C:\Users\B8511\OneDrive\Escritorio\paginacion\public-internaltools-recruitment-be-test-main\SuperPanel.API\obj\Debug\netcoreapp3.1\SuperPanel.API.csproj.CoreCompileInputs.cache
+C:\Users\B8511\OneDrive\Escritorio\paginacion\public-internaltools-recruitment-be-test-main\SuperPanel.API\obj\Debug\netcoreapp3.1\SuperPanel.API.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\B8511\OneDrive\Escritorio\paginacion\public-internaltools-recruitment-be-test-main\SuperPanel.API\obj\Debug\netcoreapp3.1\SuperPanel.API.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\B8511\OneDrive\Escritorio\paginacion\public-internaltools-recruitment-be-test-main\SuperPanel.API\obj\Debug\netcoreapp3.1\staticwebassets\SuperPanel.API.StaticWebAssets.Manifest.cache
+C:\Users\B8511\OneDrive\Escritorio\paginacion\public-internaltools-recruitment-be-test-main\SuperPanel.API\obj\Debug\netcoreapp3.1\staticwebassets\SuperPanel.API.StaticWebAssets.xml
+C:\Users\B8511\OneDrive\Escritorio\paginacion\public-internaltools-recruitment-be-test-main\SuperPanel.API\obj\Debug\netcoreapp3.1\scopedcss\bundle\SuperPanel.API.styles.css
+C:\Users\B8511\OneDrive\Escritorio\paginacion\public-internaltools-recruitment-be-test-main\SuperPanel.API\obj\Debug\netcoreapp3.1\SuperPanel.API.RazorTargetAssemblyInfo.cache
+C:\Users\B8511\OneDrive\Escritorio\paginacion\public-internaltools-recruitment-be-test-main\SuperPanel.API\obj\Debug\netcoreapp3.1\SuperPanel.API.csproj.CopyComplete
+C:\Users\B8511\OneDrive\Escritorio\paginacion\public-internaltools-recruitment-be-test-main\SuperPanel.API\obj\Debug\netcoreapp3.1\SuperPanel.API.dll
+C:\Users\B8511\OneDrive\Escritorio\paginacion\public-internaltools-recruitment-be-test-main\SuperPanel.API\obj\Debug\netcoreapp3.1\SuperPanel.API.pdb
+C:\Users\B8511\OneDrive\Escritorio\paginacion\public-internaltools-recruitment-be-test-main\SuperPanel.API\obj\Debug\netcoreapp3.1\SuperPanel.API.genruntimeconfig.cache
+C:\Users\cesar\Downloads\Lodgify - exercise\0.Solution\SuperPanel.API\bin\Debug\netcoreapp3.1\appsettings.Development.json
+C:\Users\cesar\Downloads\Lodgify - exercise\0.Solution\SuperPanel.API\bin\Debug\netcoreapp3.1\appsettings.json
+C:\Users\cesar\Downloads\Lodgify - exercise\0.Solution\SuperPanel.API\bin\Debug\netcoreapp3.1\SuperPanel.API.StaticWebAssets.xml
+C:\Users\cesar\Downloads\Lodgify - exercise\0.Solution\SuperPanel.API\bin\Debug\netcoreapp3.1\SuperPanel.API.exe
+C:\Users\cesar\Downloads\Lodgify - exercise\0.Solution\SuperPanel.API\bin\Debug\netcoreapp3.1\SuperPanel.API.deps.json
+C:\Users\cesar\Downloads\Lodgify - exercise\0.Solution\SuperPanel.API\bin\Debug\netcoreapp3.1\SuperPanel.API.runtimeconfig.json
+C:\Users\cesar\Downloads\Lodgify - exercise\0.Solution\SuperPanel.API\bin\Debug\netcoreapp3.1\SuperPanel.API.runtimeconfig.dev.json
+C:\Users\cesar\Downloads\Lodgify - exercise\0.Solution\SuperPanel.API\bin\Debug\netcoreapp3.1\SuperPanel.API.dll
+C:\Users\cesar\Downloads\Lodgify - exercise\0.Solution\SuperPanel.API\bin\Debug\netcoreapp3.1\SuperPanel.API.pdb
+C:\Users\cesar\Downloads\Lodgify - exercise\0.Solution\SuperPanel.API\bin\Debug\netcoreapp3.1\Mapster.dll
+C:\Users\cesar\Downloads\Lodgify - exercise\0.Solution\SuperPanel.API\bin\Debug\netcoreapp3.1\Mapster.Core.dll
+C:\Users\cesar\Downloads\Lodgify - exercise\0.Solution\SuperPanel.API\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.dll
+C:\Users\cesar\Downloads\Lodgify - exercise\0.Solution\SuperPanel.API\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Users\cesar\Downloads\Lodgify - exercise\0.Solution\SuperPanel.API\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.InMemory.dll
+C:\Users\cesar\Downloads\Lodgify - exercise\0.Solution\SuperPanel.API\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Caching.Abstractions.dll
+C:\Users\cesar\Downloads\Lodgify - exercise\0.Solution\SuperPanel.API\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Caching.Memory.dll
+C:\Users\cesar\Downloads\Lodgify - exercise\0.Solution\SuperPanel.API\bin\Debug\netcoreapp3.1\Microsoft.Extensions.DependencyInjection.dll
+C:\Users\cesar\Downloads\Lodgify - exercise\0.Solution\SuperPanel.API\bin\Debug\netcoreapp3.1\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\cesar\Downloads\Lodgify - exercise\0.Solution\SuperPanel.API\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Logging.dll
+C:\Users\cesar\Downloads\Lodgify - exercise\0.Solution\SuperPanel.API\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\cesar\Downloads\Lodgify - exercise\0.Solution\SuperPanel.API\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Options.dll
+C:\Users\cesar\Downloads\Lodgify - exercise\0.Solution\SuperPanel.API\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Primitives.dll
+C:\Users\cesar\Downloads\Lodgify - exercise\0.Solution\SuperPanel.API\bin\Debug\netcoreapp3.1\Microsoft.OpenApi.dll
+C:\Users\cesar\Downloads\Lodgify - exercise\0.Solution\SuperPanel.API\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\cesar\Downloads\Lodgify - exercise\0.Solution\SuperPanel.API\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\cesar\Downloads\Lodgify - exercise\0.Solution\SuperPanel.API\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\cesar\Downloads\Lodgify - exercise\0.Solution\SuperPanel.API\bin\Debug\netcoreapp3.1\System.Collections.Immutable.dll
+C:\Users\cesar\Downloads\Lodgify - exercise\0.Solution\SuperPanel.API\bin\Debug\netcoreapp3.1\System.ComponentModel.Annotations.dll
+C:\Users\cesar\Downloads\Lodgify - exercise\0.Solution\SuperPanel.API\bin\Debug\netcoreapp3.1\System.Diagnostics.DiagnosticSource.dll
+C:\Users\cesar\Downloads\Lodgify - exercise\0.Solution\SuperPanel.API\obj\Debug\netcoreapp3.1\SuperPanel.API.csproj.AssemblyReference.cache
+C:\Users\cesar\Downloads\Lodgify - exercise\0.Solution\SuperPanel.API\obj\Debug\netcoreapp3.1\SuperPanel.API.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\cesar\Downloads\Lodgify - exercise\0.Solution\SuperPanel.API\obj\Debug\netcoreapp3.1\SuperPanel.API.AssemblyInfoInputs.cache
+C:\Users\cesar\Downloads\Lodgify - exercise\0.Solution\SuperPanel.API\obj\Debug\netcoreapp3.1\SuperPanel.API.AssemblyInfo.cs
+C:\Users\cesar\Downloads\Lodgify - exercise\0.Solution\SuperPanel.API\obj\Debug\netcoreapp3.1\SuperPanel.API.csproj.CoreCompileInputs.cache
+C:\Users\cesar\Downloads\Lodgify - exercise\0.Solution\SuperPanel.API\obj\Debug\netcoreapp3.1\SuperPanel.API.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\cesar\Downloads\Lodgify - exercise\0.Solution\SuperPanel.API\obj\Debug\netcoreapp3.1\SuperPanel.API.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\cesar\Downloads\Lodgify - exercise\0.Solution\SuperPanel.API\obj\Debug\netcoreapp3.1\staticwebassets\SuperPanel.API.StaticWebAssets.Manifest.cache
+C:\Users\cesar\Downloads\Lodgify - exercise\0.Solution\SuperPanel.API\obj\Debug\netcoreapp3.1\SuperPanel.API.RazorTargetAssemblyInfo.cache
+C:\Users\cesar\Downloads\Lodgify - exercise\0.Solution\SuperPanel.API\obj\Debug\netcoreapp3.1\SuperPanel.API.csproj.CopyComplete
+C:\Users\cesar\Downloads\Lodgify - exercise\0.Solution\SuperPanel.API\obj\Debug\netcoreapp3.1\SuperPanel.API.dll
+C:\Users\cesar\Downloads\Lodgify - exercise\0.Solution\SuperPanel.API\obj\Debug\netcoreapp3.1\SuperPanel.API.pdb
+C:\Users\cesar\Downloads\Lodgify - exercise\0.Solution\SuperPanel.API\obj\Debug\netcoreapp3.1\SuperPanel.API.genruntimeconfig.cache
+C:\Users\cesar\Downloads\Lodgify - exercise\00.MySolution\SuperPanel.API\bin\Debug\netcoreapp3.1\appsettings.Development.json
+C:\Users\cesar\Downloads\Lodgify - exercise\00.MySolution\SuperPanel.API\bin\Debug\netcoreapp3.1\appsettings.json
+C:\Users\cesar\Downloads\Lodgify - exercise\00.MySolution\SuperPanel.API\bin\Debug\netcoreapp3.1\SuperPanel.API.StaticWebAssets.xml
+C:\Users\cesar\Downloads\Lodgify - exercise\00.MySolution\SuperPanel.API\bin\Debug\netcoreapp3.1\SuperPanel.API.exe
+C:\Users\cesar\Downloads\Lodgify - exercise\00.MySolution\SuperPanel.API\bin\Debug\netcoreapp3.1\SuperPanel.API.deps.json
+C:\Users\cesar\Downloads\Lodgify - exercise\00.MySolution\SuperPanel.API\bin\Debug\netcoreapp3.1\SuperPanel.API.runtimeconfig.json
+C:\Users\cesar\Downloads\Lodgify - exercise\00.MySolution\SuperPanel.API\bin\Debug\netcoreapp3.1\SuperPanel.API.runtimeconfig.dev.json
+C:\Users\cesar\Downloads\Lodgify - exercise\00.MySolution\SuperPanel.API\bin\Debug\netcoreapp3.1\SuperPanel.API.dll
+C:\Users\cesar\Downloads\Lodgify - exercise\00.MySolution\SuperPanel.API\bin\Debug\netcoreapp3.1\SuperPanel.API.pdb
+C:\Users\cesar\Downloads\Lodgify - exercise\00.MySolution\SuperPanel.API\bin\Debug\netcoreapp3.1\SuperPanel.API.Views.dll
+C:\Users\cesar\Downloads\Lodgify - exercise\00.MySolution\SuperPanel.API\bin\Debug\netcoreapp3.1\Mapster.dll
+C:\Users\cesar\Downloads\Lodgify - exercise\00.MySolution\SuperPanel.API\bin\Debug\netcoreapp3.1\Mapster.Core.dll
+C:\Users\cesar\Downloads\Lodgify - exercise\00.MySolution\SuperPanel.API\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.dll
+C:\Users\cesar\Downloads\Lodgify - exercise\00.MySolution\SuperPanel.API\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Users\cesar\Downloads\Lodgify - exercise\00.MySolution\SuperPanel.API\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.InMemory.dll
+C:\Users\cesar\Downloads\Lodgify - exercise\00.MySolution\SuperPanel.API\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Caching.Abstractions.dll
+C:\Users\cesar\Downloads\Lodgify - exercise\00.MySolution\SuperPanel.API\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Caching.Memory.dll
+C:\Users\cesar\Downloads\Lodgify - exercise\00.MySolution\SuperPanel.API\bin\Debug\netcoreapp3.1\Microsoft.Extensions.DependencyInjection.dll
+C:\Users\cesar\Downloads\Lodgify - exercise\00.MySolution\SuperPanel.API\bin\Debug\netcoreapp3.1\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\cesar\Downloads\Lodgify - exercise\00.MySolution\SuperPanel.API\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Logging.dll
+C:\Users\cesar\Downloads\Lodgify - exercise\00.MySolution\SuperPanel.API\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\cesar\Downloads\Lodgify - exercise\00.MySolution\SuperPanel.API\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Options.dll
+C:\Users\cesar\Downloads\Lodgify - exercise\00.MySolution\SuperPanel.API\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Primitives.dll
+C:\Users\cesar\Downloads\Lodgify - exercise\00.MySolution\SuperPanel.API\bin\Debug\netcoreapp3.1\Microsoft.OpenApi.dll
+C:\Users\cesar\Downloads\Lodgify - exercise\00.MySolution\SuperPanel.API\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
+C:\Users\cesar\Downloads\Lodgify - exercise\00.MySolution\SuperPanel.API\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\cesar\Downloads\Lodgify - exercise\00.MySolution\SuperPanel.API\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\cesar\Downloads\Lodgify - exercise\00.MySolution\SuperPanel.API\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\cesar\Downloads\Lodgify - exercise\00.MySolution\SuperPanel.API\bin\Debug\netcoreapp3.1\System.Collections.Immutable.dll
+C:\Users\cesar\Downloads\Lodgify - exercise\00.MySolution\SuperPanel.API\bin\Debug\netcoreapp3.1\System.ComponentModel.Annotations.dll
+C:\Users\cesar\Downloads\Lodgify - exercise\00.MySolution\SuperPanel.API\bin\Debug\netcoreapp3.1\System.Diagnostics.DiagnosticSource.dll
+C:\Users\cesar\Downloads\Lodgify - exercise\00.MySolution\SuperPanel.API\obj\Debug\netcoreapp3.1\SuperPanel.API.csproj.AssemblyReference.cache
+C:\Users\cesar\Downloads\Lodgify - exercise\00.MySolution\SuperPanel.API\obj\Debug\netcoreapp3.1\SuperPanel.API.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\cesar\Downloads\Lodgify - exercise\00.MySolution\SuperPanel.API\obj\Debug\netcoreapp3.1\SuperPanel.API.AssemblyInfoInputs.cache
+C:\Users\cesar\Downloads\Lodgify - exercise\00.MySolution\SuperPanel.API\obj\Debug\netcoreapp3.1\SuperPanel.API.AssemblyInfo.cs
+C:\Users\cesar\Downloads\Lodgify - exercise\00.MySolution\SuperPanel.API\obj\Debug\netcoreapp3.1\SuperPanel.API.csproj.CoreCompileInputs.cache
+C:\Users\cesar\Downloads\Lodgify - exercise\00.MySolution\SuperPanel.API\obj\Debug\netcoreapp3.1\SuperPanel.API.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\cesar\Downloads\Lodgify - exercise\00.MySolution\SuperPanel.API\obj\Debug\netcoreapp3.1\SuperPanel.API.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\cesar\Downloads\Lodgify - exercise\00.MySolution\SuperPanel.API\obj\Debug\netcoreapp3.1\staticwebassets\SuperPanel.API.StaticWebAssets.Manifest.cache
+C:\Users\cesar\Downloads\Lodgify - exercise\00.MySolution\SuperPanel.API\obj\Debug\netcoreapp3.1\SuperPanel.API.RazorTargetAssemblyInfo.cache
+C:\Users\cesar\Downloads\Lodgify - exercise\00.MySolution\SuperPanel.API\obj\Debug\netcoreapp3.1\SuperPanel.API.csproj.CopyComplete
+C:\Users\cesar\Downloads\Lodgify - exercise\00.MySolution\SuperPanel.API\obj\Debug\netcoreapp3.1\SuperPanel.API.dll
+C:\Users\cesar\Downloads\Lodgify - exercise\00.MySolution\SuperPanel.API\obj\Debug\netcoreapp3.1\SuperPanel.API.pdb
+C:\Users\cesar\Downloads\Lodgify - exercise\00.MySolution\SuperPanel.API\obj\Debug\netcoreapp3.1\SuperPanel.API.genruntimeconfig.cache
