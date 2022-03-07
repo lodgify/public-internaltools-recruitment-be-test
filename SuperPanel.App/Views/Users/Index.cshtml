@@ -5,6 +5,15 @@
     ViewData["Title"] = "User's list";
 }
 
+@if (TempData["error"] != null) 
+{
+    <div class="alert alert-warning alert-dismissible fade show" role="alert">
+      <strong>Error</strong> @TempData["error"]
+      <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+}
 
 <table class="table">
 
@@ -14,6 +23,7 @@
             <th>Name</th>
             <th>Email</th>
             <th>Created at</th>
+            <th></th>
         </tr>
     </thead>
     @foreach (var u in Model.Entities)
@@ -23,6 +33,7 @@
             <td>@u.FirstName @u.LastName</td>
             <td>@u.Email</td>
             <td>@u.CreatedAt</td>
+            <td><a class="btn btn-danger btn-xs" href="@Url.Action("Gdpr", "Users", new { page = Model.CurrentPage, id = u.Id })">Delete</a></td>
         </tr>
     }
 </table>

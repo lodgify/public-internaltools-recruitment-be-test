@@ -13,6 +13,7 @@ namespace SuperPanel.App.Data
     public interface IUserRepository
     {
         ListQueryResult<User> QueryAll(int page);
+        void DeleteUser(int id);
     }
 
     public class UserRepository : IUserRepository
@@ -43,6 +44,11 @@ namespace SuperPanel.App.Data
             };
 
             return result;
+        }
+
+        public void DeleteUser(int id)
+        {
+            _users.Remove(_users.Single(u => u.Id == id));
         }
 
     }
