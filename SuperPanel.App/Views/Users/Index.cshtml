@@ -1,4 +1,5 @@
-﻿@model IEnumerable<User>
+﻿@using SuperPanel.App.Models.Base.Output
+@model ListQueryResult<User>
 
 @{
     ViewData["Title"] = "User's list";
@@ -15,7 +16,7 @@
             <th>Created at</th>
         </tr>
     </thead>
-    @foreach (var u in Model)
+    @foreach (var u in Model.Entities)
     {
         <tr>
             <td>@u.Id</td>
@@ -25,3 +26,28 @@
         </tr>
     }
 </table>
+
+<nav aria-label="Page navigation example">
+  <ul class="pagination">
+    <li class="page-item"><a class="page-link" href="@Url.Action("Index", "Users", new { page = Model.CurrentPage - 1 })">Previous</a></li>
+    @if(Model.CurrentPage + 1 < Model.TotalPage)
+    {
+        <li class="page-item"><a class="page-link" href="@Url.Action("Index", "Users", new { page = Model.CurrentPage + 1 })">@(Model.CurrentPage + 1)</a></li>
+    }
+    @if (Model.CurrentPage + 2 < Model.TotalPage)
+    {
+        <li class="page-item"><a class="page-link" href="@Url.Action("Index", "Users", new { page = Model.CurrentPage + 2 })">@(Model.CurrentPage + 2)</a></li>
+    }
+    @if (Model.CurrentPage + 2 < Model.TotalPage)
+    {
+        <li class="page-item"><a class="page-link" href="@Url.Action("Index", "Users", new { page = Model.CurrentPage + 3 })">@(Model.CurrentPage + 3)</a></li>
+    }
+    @if (Model.CurrentPage + 1 < Model.TotalPage)
+    {
+        <li class="page-item"><a class="page-link" href="@Url.Action("Index", "Users", new { page = Model.CurrentPage + 1 })">Next</a></li>
+    }
+  </ul>
+</nav>
+
+<span class="badge badge-pill badge-primary">Current page: @Model.CurrentPage</span>
+<span class="badge badge-pill badge-primary">Total page: @Model.TotalPage</span>

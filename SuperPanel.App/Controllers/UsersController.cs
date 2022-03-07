@@ -15,12 +15,11 @@ namespace SuperPanel.App.Controllers
             _userRepository = userRepository;
         }
 
-        public IActionResult Index()
+        public IActionResult Index(int? page)
         {
-            var users = _userRepository.QueryAll();
+            var users = _userRepository.QueryAll(page??1);
             return View(users);
         }
-
 
     }
 }
