@@ -1,8 +1,11 @@
-﻿using ExternalContacts.Api.Services;
+﻿using ExternalContacts.Api.Models;
+using ExternalContacts.Api.Services;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;
+using System.Linq;
+using System.Net;
 
 namespace ExternalContacts.Api.Controllers
 {
@@ -69,6 +72,23 @@ namespace ExternalContacts.Api.Controllers
             _externalContactsService.Anonymize(c);
 
             return new JsonResult(c);
+        }
+
+        [HttpPut("gdpr-batch")]
+        [ProducesResponseType((int)HttpStatusCode.OK)]
+        [ProducesResponseType((int)HttpStatusCode.NotFound)]
+        [ProducesResponseType((int)HttpStatusCode.BadRequest)]
+        public ActionResult<List<Contact>> GdprBatch([FromBody] GdprPutCommand command)
+        {
+            AreyouFeelingLucky();
+
+            var c = _externalContactsService.GetByIds(command.Ids);
+            if (c == null || !c.Any())
+                return NotFound();
+
+            _externalContactsService.AnonymizeList(c);
+
+            return Ok(c);
         }
 
         private void AreyouFeelingLucky()
