@@ -12,8 +12,10 @@ namespace ExternalContacts.Api.Services
         IEnumerable<Contact> GetAll();
         Contact GetByEmail(string email);
         Contact GetById(long id);
+        List<Contact> GetByIds(List<long> ids);
 
         void Anonymize(Contact c);
+        void AnonymizeList(List<Contact> contacts);
     }
 
     public class ExternalContactsService : IExternalContactsService
@@ -56,6 +58,11 @@ namespace ExternalContacts.Api.Services
             return _contacts.FirstOrDefault(_ => _.Id == id);
         }
 
+        public List<Contact> GetByIds(List<long> ids)
+        {
+            return _contacts.Where(_ => ids.Contains(_.Id)).ToList();
+        }
+
         public void Anonymize(Contact c)
         {
             var anonymizationTemplate = $"anonymous-{Guid.NewGuid()}";
@@ -63,6 +70,18 @@ namespace ExternalContacts.Api.Services
             c.FirstName = anonymizationTemplate;
             c.LastName = anonymizationTemplate;
             c.IsAnonymized = true;
+        }
+
+        public void AnonymizeList(List<Contact> contacts)
+        {
+            foreach (var c in contacts)
+            {
+                var anonymizationTemplate = $"anonymous-{Guid.NewGuid()}";
+                c.Email = $"{anonymizationTemplate}@externalservice.com";
+                c.FirstName = anonymizationTemplate;
+                c.LastName = anonymizationTemplate;
+                c.IsAnonymized = true;
+            }
         }
 
 
