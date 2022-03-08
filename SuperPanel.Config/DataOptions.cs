@@ -9,5 +9,6 @@ namespace SuperPanel.Config
     public class DataOptions
     {
         public string JsonFilePath { get; set; }
+        public int PageSize { get; set; }
     }
 }

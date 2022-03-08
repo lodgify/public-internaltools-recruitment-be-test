@@ -7,6 +7,7 @@ using Microsoft.Extensions.Hosting;
 using SuperPanel.Abstractions;
 using SuperPanel.Config;
 using SuperPanel.DataProvider;
+using SuperPanel.Engines.Services;
 using SuperPanel.Models;
 using System;
 using System.Linq;
@@ -35,6 +36,7 @@ namespace SuperPanel.App
 
             // Data
             services.AddSingleton<IUserRepository, UserRepository>();
+            services.AddSingleton<IDataService, DataService>();
         }
 
 

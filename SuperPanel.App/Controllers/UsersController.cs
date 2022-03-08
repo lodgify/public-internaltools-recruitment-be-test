@@ -1,6 +1,8 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using SuperPanel.Abstractions;
+using SuperPanel.Engines.Derivates;
+using SuperPanel.Models;
 using System;
 
 namespace SuperPanel.App.Controllers
@@ -8,22 +10,22 @@ namespace SuperPanel.App.Controllers
     public class UsersController : Controller
     {
         private readonly ILogger<UsersController> _logger;
-        private readonly IUserRepository _userRepository;
+        private readonly IDataService _dataService;
 
         public UsersController(
             ILogger<UsersController> logger,
-            IUserRepository userRepository
+            IDataService dataService
             )
         {
             _logger = logger;
-            _userRepository = userRepository;
+            _dataService = dataService;
         }
 
-        public IActionResult Index()
+        public IActionResult Index(int? pageNumber)
         {
             try
             {
-                var users = _userRepository.QueryAll();
+                var users = _dataService.GetPageListFromUsers(pageNumber) as PaginatedList<User>;
 
                 return View(users);
             }

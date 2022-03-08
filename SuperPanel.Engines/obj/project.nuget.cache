@@ -1,8 +1,16 @@
 {
   "version": 2,
-  "dgSpecHash": "oZMQZ4ORNV4xa/rCVaHz48VbhPADacF4126XKDLsroNVJuFDOe6/xS7y2bwcqHvCU/0Kh/aRcBV1kaDnzA7aIw==",
+  "dgSpecHash": "aRmRQMorfYx/gUvCZivBZG8FYY7RBYmsLI/qUWzp6Pa2uT61HxGAbSlT1i0OfsYB13dDxny9B3EZhWjtXPeIvw==",
   "success": true,
   "projectFilePath": "C:\\Users\\javier.mendoza\\Source\\Repos\\public-internaltools-recruitment-be-test\\SuperPanel.Engines\\SuperPanel.Engines.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\javier.mendoza\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\6.0.0\\microsoft.extensions.dependencyinjection.abstractions.6.0.0.nupkg.sha512",
+    "C:\\Users\\javier.mendoza\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\6.0.0\\microsoft.extensions.logging.abstractions.6.0.0.nupkg.sha512",
+    "C:\\Users\\javier.mendoza\\.nuget\\packages\\microsoft.extensions.options\\6.0.0\\microsoft.extensions.options.6.0.0.nupkg.sha512",
+    "C:\\Users\\javier.mendoza\\.nuget\\packages\\microsoft.extensions.primitives\\6.0.0\\microsoft.extensions.primitives.6.0.0.nupkg.sha512",
+    "C:\\Users\\javier.mendoza\\.nuget\\packages\\system.buffers\\4.5.1\\system.buffers.4.5.1.nupkg.sha512",
+    "C:\\Users\\javier.mendoza\\.nuget\\packages\\system.memory\\4.5.4\\system.memory.4.5.4.nupkg.sha512",
+    "C:\\Users\\javier.mendoza\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\6.0.0\\system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512"
+  ],
   "logs": []
 }
