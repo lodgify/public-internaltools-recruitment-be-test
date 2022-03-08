@@ -1,11 +1,30 @@
 {
   "version": 3,
   "targets": {
-    "net5.0": {}
+    "net5.0": {
+      "SuperPanel.Models/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "compile": {
+          "bin/placeholder/SuperPanel.Models.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/SuperPanel.Models.dll": {}
+        }
+      }
+    }
   },
-  "libraries": {},
+  "libraries": {
+    "SuperPanel.Models/1.0.0": {
+      "type": "project",
+      "path": "../SuperPanel.Models/SuperPanel.Models.csproj",
+      "msbuildProject": "../SuperPanel.Models/SuperPanel.Models.csproj"
+    }
+  },
   "projectFileDependencyGroups": {
-    "net5.0": []
+    "net5.0": [
+      "SuperPanel.Models >= 1.0.0"
+    ]
   },
   "packageFolders": {
     "C:\\Users\\javier.mendoza\\.nuget\\packages\\": {},
@@ -38,7 +57,11 @@
       "frameworks": {
         "net5.0": {
           "targetAlias": "net5.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\javier.mendoza\\Source\\Repos\\public-internaltools-recruitment-be-test\\SuperPanel.Models\\SuperPanel.Models.csproj": {
+              "projectPath": "C:\\Users\\javier.mendoza\\Source\\Repos\\public-internaltools-recruitment-be-test\\SuperPanel.Models\\SuperPanel.Models.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

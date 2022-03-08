@@ -1,0 +1,11 @@
+C:\Users\javier.mendoza\Source\Repos\public-internaltools-recruitment-be-test\SuperPanel.Models\bin\Debug\net5.0\SuperPanel.Models.deps.json
+C:\Users\javier.mendoza\Source\Repos\public-internaltools-recruitment-be-test\SuperPanel.Models\bin\Debug\net5.0\SuperPanel.Models.dll
+C:\Users\javier.mendoza\Source\Repos\public-internaltools-recruitment-be-test\SuperPanel.Models\bin\Debug\net5.0\ref\SuperPanel.Models.dll
+C:\Users\javier.mendoza\Source\Repos\public-internaltools-recruitment-be-test\SuperPanel.Models\bin\Debug\net5.0\SuperPanel.Models.pdb
+C:\Users\javier.mendoza\Source\Repos\public-internaltools-recruitment-be-test\SuperPanel.Models\obj\Debug\net5.0\SuperPanel.Models.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\javier.mendoza\Source\Repos\public-internaltools-recruitment-be-test\SuperPanel.Models\obj\Debug\net5.0\SuperPanel.Models.AssemblyInfoInputs.cache
+C:\Users\javier.mendoza\Source\Repos\public-internaltools-recruitment-be-test\SuperPanel.Models\obj\Debug\net5.0\SuperPanel.Models.AssemblyInfo.cs
+C:\Users\javier.mendoza\Source\Repos\public-internaltools-recruitment-be-test\SuperPanel.Models\obj\Debug\net5.0\SuperPanel.Models.csproj.CoreCompileInputs.cache
+C:\Users\javier.mendoza\Source\Repos\public-internaltools-recruitment-be-test\SuperPanel.Models\obj\Debug\net5.0\SuperPanel.Models.dll
+C:\Users\javier.mendoza\Source\Repos\public-internaltools-recruitment-be-test\SuperPanel.Models\obj\Debug\net5.0\ref\SuperPanel.Models.dll
+C:\Users\javier.mendoza\Source\Repos\public-internaltools-recruitment-be-test\SuperPanel.Models\obj\Debug\net5.0\SuperPanel.Models.pdb

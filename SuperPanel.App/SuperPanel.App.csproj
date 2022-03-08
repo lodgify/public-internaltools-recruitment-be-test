@@ -15,4 +15,10 @@
     <PackageReference Include="Bogus" Version="33.1.1" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\SuperPanel.Abstractions\SuperPanel.Abstractions.csproj" />
+    <ProjectReference Include="..\SuperPanel.Config\SuperPanel.Config.csproj" />
+    <ProjectReference Include="..\SuperPanel.DataProvider\SuperPanel.DataProvider.csproj" />
+  </ItemGroup>
+
 </Project>

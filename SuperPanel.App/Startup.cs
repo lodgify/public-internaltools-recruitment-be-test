@@ -4,9 +4,10 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using SuperPanel.App.Data;
-using SuperPanel.App.Infrastructure;
-using SuperPanel.App.Models;
+using SuperPanel.Abstractions;
+using SuperPanel.Config;
+using SuperPanel.DataProvider;
+using SuperPanel.Models;
 using System;
 using System.Linq;
 using System.Text.Json;
@@ -72,7 +73,8 @@ namespace SuperPanel.App
 
             var userIds = 10000;
             var faker = new Faker<User>()
-                .CustomInstantiator(f => new User(userIds++))
+                //.CustomInstantiator(f => new User(userIds++))
+                .CustomInstantiator(f => new User { Id = userIds++})
                 .RuleFor(u => u.Login, (f, u) => f.Internet.UserName())
                 .RuleFor(u => u.FirstName, (f, u) => f.Name.FirstName())
                 .RuleFor(u => u.LastName, (f, u) => f.Name.LastName())

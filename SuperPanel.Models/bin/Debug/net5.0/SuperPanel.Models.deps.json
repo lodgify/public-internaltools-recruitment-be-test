@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v5.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v5.0": {
+      "SuperPanel.Models/1.0.0": {
+        "runtime": {
+          "SuperPanel.Models.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "SuperPanel.Models/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
