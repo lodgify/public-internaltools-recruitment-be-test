@@ -13,7 +13,7 @@ C:\Users\javier.mendoza\Source\Repos\public-internaltools-recruitment-be-test\Su
 C:\Users\javier.mendoza\Source\Repos\public-internaltools-recruitment-be-test\SuperPanel.Engines\obj\Debug\net5.0\SuperPanel.Engines.AssemblyInfoInputs.cache
 C:\Users\javier.mendoza\Source\Repos\public-internaltools-recruitment-be-test\SuperPanel.Engines\obj\Debug\net5.0\SuperPanel.Engines.AssemblyInfo.cs
 C:\Users\javier.mendoza\Source\Repos\public-internaltools-recruitment-be-test\SuperPanel.Engines\obj\Debug\net5.0\SuperPanel.Engines.csproj.CoreCompileInputs.cache
-C:\Users\javier.mendoza\Source\Repos\public-internaltools-recruitment-be-test\SuperPanel.Engines\obj\Debug\net5.0\SuperPanel.Engines.csproj.CopyComplete
 C:\Users\javier.mendoza\Source\Repos\public-internaltools-recruitment-be-test\SuperPanel.Engines\obj\Debug\net5.0\SuperPanel.Engines.dll
 C:\Users\javier.mendoza\Source\Repos\public-internaltools-recruitment-be-test\SuperPanel.Engines\obj\Debug\net5.0\ref\SuperPanel.Engines.dll
 C:\Users\javier.mendoza\Source\Repos\public-internaltools-recruitment-be-test\SuperPanel.Engines\obj\Debug\net5.0\SuperPanel.Engines.pdb
+C:\Users\javier.mendoza\source\repos\public-internaltools-recruitment-be-test\SuperPanel.Engines\obj\Debug\net5.0\SuperPanel.Engines.csproj.CopyComplete

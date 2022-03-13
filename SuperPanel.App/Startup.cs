@@ -5,8 +5,10 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using SuperPanel.Abstractions;
+using SuperPanel.Abstractions.Actions;
 using SuperPanel.Config;
 using SuperPanel.DataProvider;
+using SuperPanel.Engines.Actions;
 using SuperPanel.Engines.Services;
 using SuperPanel.Models;
 using System;
@@ -31,12 +33,17 @@ namespace SuperPanel.App
             // GenerateFakeData();
 
             services.AddControllersWithViews();
+            services.AddHttpClient();
             services.AddOptions();
             services.Configure<DataOptions>(options => Configuration.GetSection("Data").Bind(options));
 
             // Data
             services.AddSingleton<IUserRepository, UserRepository>();
             services.AddSingleton<IDataService, DataService>();
+            services.AddSingleton<IJsonSerialization, JsonSerialization>();
+            services.AddSingleton<IHttpClientActions, HttpClientActions>();
+            services.AddSingleton<IGdprService, GdprService>();
+
         }
 
 

@@ -9,7 +9,7 @@ C:\Users\javier.mendoza\Source\Repos\public-internaltools-recruitment-be-test\Su
 C:\Users\javier.mendoza\Source\Repos\public-internaltools-recruitment-be-test\SuperPanel.Abstractions\obj\Debug\net5.0\SuperPanel.Abstractions.AssemblyInfoInputs.cache
 C:\Users\javier.mendoza\Source\Repos\public-internaltools-recruitment-be-test\SuperPanel.Abstractions\obj\Debug\net5.0\SuperPanel.Abstractions.AssemblyInfo.cs
 C:\Users\javier.mendoza\Source\Repos\public-internaltools-recruitment-be-test\SuperPanel.Abstractions\obj\Debug\net5.0\SuperPanel.Abstractions.csproj.CoreCompileInputs.cache
-C:\Users\javier.mendoza\Source\Repos\public-internaltools-recruitment-be-test\SuperPanel.Abstractions\obj\Debug\net5.0\SuperPanel.Abstractions.csproj.CopyComplete
 C:\Users\javier.mendoza\Source\Repos\public-internaltools-recruitment-be-test\SuperPanel.Abstractions\obj\Debug\net5.0\SuperPanel.Abstractions.dll
 C:\Users\javier.mendoza\Source\Repos\public-internaltools-recruitment-be-test\SuperPanel.Abstractions\obj\Debug\net5.0\ref\SuperPanel.Abstractions.dll
 C:\Users\javier.mendoza\Source\Repos\public-internaltools-recruitment-be-test\SuperPanel.Abstractions\obj\Debug\net5.0\SuperPanel.Abstractions.pdb
+C:\Users\javier.mendoza\source\repos\public-internaltools-recruitment-be-test\SuperPanel.Abstractions\obj\Debug\net5.0\SuperPanel.Abstractions.csproj.CopyComplete

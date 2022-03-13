@@ -4,29 +4,40 @@
     ViewData["Title"] = "User's list";
 }
 
+@if (!ViewData.ModelState.IsValid && ViewData.ModelState["Error"].Errors.Count > 0)
+{
+    <div class="alert alert- <strong>Error!</strong> danger">
+    @ViewData.ModelState["Error"].Errors.First().ErrorMessage
+    </div>
+}
 
 <table class="table">
-
     <thead>
         <tr>
             <th>#</th>
             <th>Name</th>
             <th>Email</th>
             <th>Created at</th>
+            <th></th>
         </tr>
     </thead>
-    @foreach (var u in Model)
-    {
-        <tr>
-            <td>@u.Id</td>
-            <td>@u.FirstName @u.LastName</td>
-            <td>@u.Email</td>
-            <td>@u.CreatedAt</td>
-        </tr>
-    }
+    <tbody>
+        @foreach (var u in Model)
+        {
+            <tr>
+                <td>@u.Id</td>
+                <td>@u.FirstName @u.LastName</td>
+                <td>@u.Email</td>
+                <td>@u.CreatedAt</td>
+                <td>
+                    <a asp-controller="Gdpr" asp-action="Index" asp-route-id="@u.Id">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
 </table>
 
-@{ 
+@{
     var prevDisabled = !Model.HasPreviousPage ? "disabled" : "";
     var nextDisabled = !Model.HasNextPage ? "disabled" : "";
 }
