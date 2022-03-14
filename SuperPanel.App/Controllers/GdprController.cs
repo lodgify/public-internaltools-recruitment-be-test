@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using SuperPanel.Abstractions;
+using SuperPanel.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -49,14 +50,19 @@ namespace SuperPanel.App.Controllers
             }
         }
 
-        // GET: GdprController/Delete/5
-        public async Task<IActionResult> Delete(string userId)
+ 
+        //[HttpPost]
+        public async Task<IActionResult> Delete(string id)
         {
             try
             {
-                var user = await _gdprService.DeleteUser(userId);
+                var userDeleted = await _gdprService.DeleteUser(id);
+                if (userDeleted == null)
+                {
+                    ModelState.AddModelError("Error", "There are some problems deleting the user. Please, try again!");
+                }
 
-                return View(user);
+                return View(userDeleted);
             }
             catch (Exception)
             {

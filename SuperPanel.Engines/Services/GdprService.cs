@@ -24,47 +24,34 @@ namespace SuperPanel.Engines.Services
         }
         public async Task<User> DeleteUser(string userId)
         {
+            var url = $@"http://localhost:61696/v1/contacts/{userId}";
+            User user = null;
             try
             {
-                var url = $@"http://localhost:61696/v1/contacts/{userId}";
-                User user = await _httpClient.ContentAsType<User>(url);
-                
-                if(user != null)
-                {
-                    user = await _httpClient.PutContentAsType<User>($"{url}/gdpr");
-                }
-
-                return user;
+                user = await _httpClient.PutContentAsType<User>($"{url}/gdpr");
             }
             catch (Exception ex)
             {
                 _logger.LogError($"Problems deleting user with Gdpr Api: {ex.StackTrace}");
-                throw;
             }
+
+            return user;
         }
 
         public async Task<User> SelectUser(string userId)
         {
+            var url = $@"http://localhost:61696/v1/contacts/{userId}";
+            User user = null;
             try
             {
-                var url = $@"http://localhost:61696/v1/contacts/{userId}";
-                var user = new User();
-                try
-                {
-                    user = await _httpClient.ContentAsType<User>(url);
-                }
-                catch (Exception)
-                {
-                    user = null;
-                }                
-
-                return user;
+                user = await _httpClient.ContentAsType<User>(url);
             }
             catch (Exception ex)
             {
-                _logger.LogError($"Problems deleting user with Gdpr Api: {ex.StackTrace}");
-                throw;
+                _logger.LogError($"The user is not present in Gdpr Api: {ex.StackTrace}");
             }
+
+            return user;
         }
     }
 }

@@ -7,7 +7,7 @@
 @if (!ViewData.ModelState.IsValid && ViewData.ModelState["Error"].Errors.Count > 0)
 {
 <div class="alert alert- <strong>Error!</strong> danger">
-    <h5>@ViewData.ModelState["Error"].Errors.First().ErrorMessage</h5>    
+    <h5>@ViewData.ModelState["Error"].Errors.First().ErrorMessage</h5>
     <a asp-controller="Users" asp-action="Index"> Back to List</a>
 </div>
 }
@@ -15,7 +15,7 @@ else
 {
 <div>
     <h3>User</h3>
-    <hr />    
+    <hr />
     <dl class="row">
         <dt class="col-sm-2">
             @Html.DisplayNameFor(model => model.Id)
@@ -60,13 +60,15 @@ else
             @Html.DisplayFor(model => model.CreatedAt)
         </dd>
     </dl>
-
+    <hr />
     <h5>Are you sure you want to delete this?</h5>
     <hr />
-    <form asp-action="Delete">
-        <input type="submit" value="Delete" class="btn btn-danger btn-primary" /> |
-        <a asp-controller="Users" asp-action="Index"> Back to List</a>
-    </form>
+    <div>
+        <a asp-action="Delete" asp-route-id="@Model.Id">
+            <input type="button" class="btn btn-danger btn-primary" value="Delete" />
+        </a> |
+        <a asp-controller="Users" asp-action="Index">Back to List</a>
+    </div>
 </div>
 }
 
