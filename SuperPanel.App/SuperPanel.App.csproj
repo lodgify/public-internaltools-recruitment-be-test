@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
-    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <TargetFramework>net5.0</TargetFramework>
   </PropertyGroup>
 
   <ItemGroup>
@@ -13,6 +13,14 @@
 
   <ItemGroup>
     <PackageReference Include="Bogus" Version="33.1.1" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="5.0.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\SuperPanel.Abstractions\SuperPanel.Abstractions.csproj" />
+    <ProjectReference Include="..\SuperPanel.Config\SuperPanel.Config.csproj" />
+    <ProjectReference Include="..\SuperPanel.DataProvider\SuperPanel.DataProvider.csproj" />
+    <ProjectReference Include="..\SuperPanel.Engines\SuperPanel.Engines.csproj" />
   </ItemGroup>
 
 </Project>

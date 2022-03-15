@@ -1,0 +1,20 @@
+﻿
+@{
+    ViewData["Title"] = "Delete Users";
+}
+
+<h3>Delete Users</h3>
+<hr />
+
+<div>
+    <form asp-action="DeleteUsers" method="post">
+        <h4>Introduce the users' list to delete: </h4>
+        <textarea id="UsersList" name="UsersList" cols="40" rows="15" style="resize: none;"></textarea>
+        <hr />
+        <h5>Are you sure you want to delete these users?</h5>
+        <hr />
+        <button type="submit" class="btn btn-danger btn-primary">Delete Users</button> |
+        <a asp-controller="Users" asp-action="Index">Back to List</a>
+    </form>
+</div>
+ 

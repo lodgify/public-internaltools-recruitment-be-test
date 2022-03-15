@@ -1,24 +1,39 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
-using SuperPanel.App.Data;
+using SuperPanel.Abstractions;
+using SuperPanel.Engines.Derivates;
+using SuperPanel.Models;
+using System;
 
 namespace SuperPanel.App.Controllers
 {
     public class UsersController : Controller
     {
         private readonly ILogger<UsersController> _logger;
-        private readonly IUserRepository _userRepository;
+        private readonly IDataService _dataService;
 
-        public UsersController(ILogger<UsersController> logger, IUserRepository userRepository)
+        public UsersController(
+            ILogger<UsersController> logger,
+            IDataService dataService
+            )
         {
             _logger = logger;
-            _userRepository = userRepository;
+            _dataService = dataService;
         }
 
-        public IActionResult Index()
+        public IActionResult Index(int? pageNumber)
         {
-            var users = _userRepository.QueryAll();
-            return View(users);
+            try
+            {
+                var users = _dataService.GetPageListFromUsers(pageNumber) as PaginatedList<User>;
+
+                return View(users);
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError($"Problems rendering Index: {ex.StackTrace}");
+                throw;
+            }
         }
 
 

@@ -1,6 +1,6 @@
 using Microsoft.Extensions.Options;
-using SuperPanel.App.Data;
-using SuperPanel.App.Infrastructure;
+using SuperPanel.Config;
+using SuperPanel.DataProvider;
 using System.Linq;
 using Xunit;
 
