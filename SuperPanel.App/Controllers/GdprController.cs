@@ -39,8 +39,9 @@ namespace SuperPanel.App.Controllers
 
                 return View(user);
             }
-            catch (Exception)
+            catch (Exception ex)
             {
+                _logger.LogError(ex.StackTrace);
                 throw;
             }
         }
@@ -57,8 +58,9 @@ namespace SuperPanel.App.Controllers
 
                 return View(userDeleted);
             }
-            catch (Exception)
+            catch (Exception ex)
             {
+                _logger.LogError(ex.StackTrace);
                 throw;
             }
         }
@@ -71,18 +73,26 @@ namespace SuperPanel.App.Controllers
         [HttpPost]
         public async Task<IActionResult> DeleteUsers(string usersList)
         {
-            var list = usersList.Split("\r\n").ToList();
-            var usersDeleted = new List<User>();
-            foreach (var item in list)
+            try
             {
-                var userDeleted = await _gdprService.DeleteUser(item);
-                if (userDeleted != null)
+                var list = usersList.Split("\r\n").ToList();
+                var usersDeleted = new List<User>();
+                foreach (var item in list)
                 {
-                    usersDeleted.Add(userDeleted);
+                    var userDeleted = await _gdprService.DeleteUser(item);
+                    if (userDeleted != null)
+                    {
+                        usersDeleted.Add(userDeleted);
+                    }
                 }
-            }
 
-            return View("DeleteUsersReport", usersDeleted);
+                return View("DeleteUsersReport", usersDeleted);
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex.StackTrace);
+                throw;
+            }            
         }
 
     }
