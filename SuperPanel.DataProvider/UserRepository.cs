@@ -16,7 +16,7 @@ namespace SuperPanel.DataProvider
     public class UserRepository : IUserRepository
     {
         private readonly ILogger _logger;
-        private readonly DataOptions _dataOptions;
+        private readonly IOptions<DataOptions> _dataOptions;
 
         public UserRepository(
             ILogger<UserRepository> logger,
@@ -24,7 +24,7 @@ namespace SuperPanel.DataProvider
             )
         {
             _logger = logger;
-            _dataOptions = dataOptions.Value;
+            _dataOptions = dataOptions;
         }
 
         public List<User> QueryAll()
@@ -45,9 +45,9 @@ namespace SuperPanel.DataProvider
         private List<User> GetUsersFromFile()
         {
             var users = new List<User>();
-            if (!string.IsNullOrEmpty(_dataOptions.JsonFilePath))
+            if (!string.IsNullOrEmpty(_dataOptions.Value.JsonFilePath))
             {
-                var json = File.ReadAllText(_dataOptions.JsonFilePath);
+                var json = File.ReadAllText(_dataOptions.Value.JsonFilePath);
                 users = JsonSerializer.Deserialize<List<User>>(json);
             }
 

@@ -8,7 +8,6 @@ C:\Users\javier.mendoza\source\repos\public-internaltools-recruitment-be-test\Su
 C:\Users\javier.mendoza\source\repos\public-internaltools-recruitment-be-test\SuperPanel.DataProvider\bin\Debug\net5.0\SuperPanel.Abstractions.pdb
 C:\Users\javier.mendoza\source\repos\public-internaltools-recruitment-be-test\SuperPanel.DataProvider\bin\Debug\net5.0\SuperPanel.Config.pdb
 C:\Users\javier.mendoza\source\repos\public-internaltools-recruitment-be-test\SuperPanel.DataProvider\bin\Debug\net5.0\SuperPanel.Models.pdb
-C:\Users\javier.mendoza\source\repos\public-internaltools-recruitment-be-test\SuperPanel.DataProvider\obj\Debug\net5.0\SuperPanel.DataProvider.csproj.AssemblyReference.cache
 C:\Users\javier.mendoza\source\repos\public-internaltools-recruitment-be-test\SuperPanel.DataProvider\obj\Debug\net5.0\SuperPanel.DataProvider.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\javier.mendoza\source\repos\public-internaltools-recruitment-be-test\SuperPanel.DataProvider\obj\Debug\net5.0\SuperPanel.DataProvider.AssemblyInfoInputs.cache
 C:\Users\javier.mendoza\source\repos\public-internaltools-recruitment-be-test\SuperPanel.DataProvider\obj\Debug\net5.0\SuperPanel.DataProvider.AssemblyInfo.cs
@@ -16,3 +15,4 @@ C:\Users\javier.mendoza\source\repos\public-internaltools-recruitment-be-test\Su
 C:\Users\javier.mendoza\source\repos\public-internaltools-recruitment-be-test\SuperPanel.DataProvider\obj\Debug\net5.0\SuperPanel.DataProvider.dll
 C:\Users\javier.mendoza\source\repos\public-internaltools-recruitment-be-test\SuperPanel.DataProvider\obj\Debug\net5.0\ref\SuperPanel.DataProvider.dll
 C:\Users\javier.mendoza\source\repos\public-internaltools-recruitment-be-test\SuperPanel.DataProvider\obj\Debug\net5.0\SuperPanel.DataProvider.pdb
+C:\Users\javier.mendoza\source\repos\public-internaltools-recruitment-be-test\SuperPanel.DataProvider\obj\Debug\net5.0\SuperPanel.DataProvider.csproj.AssemblyReference.cache

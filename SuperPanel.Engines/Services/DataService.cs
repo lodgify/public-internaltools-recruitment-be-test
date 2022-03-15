@@ -15,7 +15,7 @@ namespace SuperPanel.Engines.Services
     public class DataService : IDataService
     {
         private readonly ILogger _logger;
-        private readonly DataOptions _dataOptions;
+        private readonly IOptions<DataOptions> _dataOptions;
         private readonly IUserRepository _userRepository;
 
         public DataService(
@@ -25,7 +25,7 @@ namespace SuperPanel.Engines.Services
             )
         {
             _logger = logger;
-            _dataOptions = dataOptions.Value;
+            _dataOptions = dataOptions;
             _userRepository = userRepository;
         }
 
@@ -34,7 +34,7 @@ namespace SuperPanel.Engines.Services
             try
             {
                 var users = _userRepository.QueryAll();
-                var pageList = PaginatedList<User>.CreatePageList(users.AsQueryable(), pageNumber ?? 1, _dataOptions.PageSize);
+                var pageList = PaginatedList<User>.CreatePageList(users.AsQueryable(), pageNumber ?? 1, _dataOptions.Value.PageSize);
 
                 return pageList;
             }

@@ -2,6 +2,7 @@ C:\Users\javier.mendoza\source\repos\public-internaltools-recruitment-be-test\Su
 C:\Users\javier.mendoza\source\repos\public-internaltools-recruitment-be-test\SuperPanel.Models\bin\Debug\net5.0\SuperPanel.Models.dll
 C:\Users\javier.mendoza\source\repos\public-internaltools-recruitment-be-test\SuperPanel.Models\bin\Debug\net5.0\ref\SuperPanel.Models.dll
 C:\Users\javier.mendoza\source\repos\public-internaltools-recruitment-be-test\SuperPanel.Models\bin\Debug\net5.0\SuperPanel.Models.pdb
+C:\Users\javier.mendoza\source\repos\public-internaltools-recruitment-be-test\SuperPanel.Models\obj\Debug\net5.0\SuperPanel.Models.csproj.AssemblyReference.cache
 C:\Users\javier.mendoza\source\repos\public-internaltools-recruitment-be-test\SuperPanel.Models\obj\Debug\net5.0\SuperPanel.Models.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\javier.mendoza\source\repos\public-internaltools-recruitment-be-test\SuperPanel.Models\obj\Debug\net5.0\SuperPanel.Models.AssemblyInfoInputs.cache
 C:\Users\javier.mendoza\source\repos\public-internaltools-recruitment-be-test\SuperPanel.Models\obj\Debug\net5.0\SuperPanel.Models.AssemblyInfo.cs
