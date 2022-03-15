@@ -22,12 +22,7 @@ namespace SuperPanel.App.Controllers
             _logger = logger;
             _gdprService = gdprService;
         }
-        // GET: GdprController
-        //public ActionResult Index()
-        //{
-        //    return View();
-        //}
-
+        
         public async Task<IActionResult> Index(string id)
         {
             try
@@ -49,9 +44,7 @@ namespace SuperPanel.App.Controllers
                 throw;
             }
         }
-
  
-        //[HttpPost]
         public async Task<IActionResult> Delete(string id)
         {
             try
@@ -68,6 +61,28 @@ namespace SuperPanel.App.Controllers
             {
                 throw;
             }
+        }
+
+        public ActionResult DeleteUsers()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> DeleteUsers(string usersList)
+        {
+            var list = usersList.Split("\r\n").ToList();
+            var usersDeleted = new List<User>();
+            foreach (var item in list)
+            {
+                var userDeleted = await _gdprService.DeleteUser(item);
+                if (userDeleted != null)
+                {
+                    usersDeleted.Add(userDeleted);
+                }
+            }
+
+            return View("DeleteUsersReport", usersDeleted);
         }
 
     }
