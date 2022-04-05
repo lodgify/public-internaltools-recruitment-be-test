@@ -25,14 +25,10 @@ namespace SuperPanel.App.Controllers
             return View(users);
         }
 
-
         [HttpPost]
-        public async Task GDPR(long id)
+        public async Task<Contact> GDPR(long id)
         {
-
-            //await Task.Delay(500);
-            //throw new System.Exception("Test Message");
-            var result = await client.GdprAsync(id);
+            return await client.GdprAsync(id);
         }
 
     }

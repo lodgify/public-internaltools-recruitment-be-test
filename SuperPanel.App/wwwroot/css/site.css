@@ -74,3 +74,13 @@ body {
     margin-top: revert;
     font-size:1.3rem;
 }
+
+.blue-color{
+    color: blue;
+}
+.red-color{
+    color:red;
+}
+.green-color{
+    color:green;
+}

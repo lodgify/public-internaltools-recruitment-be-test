@@ -4,4 +4,6 @@ SuperPanel.App/bin/
 SuperPanel.App/obj/
 SuperPanel.Tests/bin/
 SuperPanel.Tests/obj/
+ExternalResource/bin/
+ExternalResource/obj/
 .vs/
