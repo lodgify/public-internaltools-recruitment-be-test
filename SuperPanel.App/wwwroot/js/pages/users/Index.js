@@ -18,13 +18,10 @@ function sendRequest(id) {
             $.toast({
                 text: data.firstName + ' ' + data.lastName + '<br />Email Address: ' + data.email,
                 heading: 'Success',
-                showHideTransition: 'fade',
-                allowToastClose: true,
                 loader: true,
                 hideAfter: 7000,
                 position: 'top-center',
                 bgColor: 'green',
-                textColor: '#eee',
             });
         },
         error: (xhr) => errorHandler(xhr),
@@ -32,6 +29,17 @@ function sendRequest(id) {
     });
 }
 function processAll() {
+    if ($('#table-user td input:checked').length == 0) {
+        $.toast({
+            text: 'Nothing selected',
+            heading: 'Info',
+            hideAfter: 2500,
+            position: 'top-center',
+            bgColor: 'lightblue',
+            textColor: 'darkblue',
+        });
+        return;
+    }
     $('#table-user td input:checked').each(function (i, elem) {
         var tr = $(elem).closest('tr');
         var id = tr.find('td:eq(1)').text();

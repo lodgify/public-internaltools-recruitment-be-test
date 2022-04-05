@@ -6,19 +6,16 @@ function errorHandler(data) {
         $.toast({
             text: 'External API unavailable. please try again later.',
             heading: 'Api Error (' + result.StatusCode + ')',
-            showHideTransition: 'fade',
             hideAfter: 4000,
             position: 'top-center',
             bgColor: '#fd6767',
-            textColor: '#eee',
         });
         return;
     }
     if (result.ErrorCode === 520 && result.StatusCode === 404) {
         $.toast({
             text: 'The user not found!',
-            heading: 'Api Error ('+result.StatusCode+')',
-            showHideTransition: 'fade',
+            heading: 'Api Error (' + result.StatusCode + ')',
             hideAfter: 4000,
             position: 'top-center',
             bgColor: 'lightblue',
@@ -26,15 +23,21 @@ function errorHandler(data) {
         });
         return;
     }
-
+    if (result.ErrorCode === 520) {
+        $.toast({
+            text: 'External API unknown error. please try again later.',
+            heading: 'Api Error (' + result.StatusCode + ')',
+            hideAfter: 4000,
+            position: 'top-center',
+            bgColor: '#fd6767',
+        });
+        return;
+    }
     $.toast({
         text: result.Message,
         heading: result.StatusCode,
-        showHideTransition: 'fade',
         hideAfter: 4000,
         position: 'top-center',
-        bgColor: '#444',
-        textColor: '#eee',
     });
 
 }
