@@ -54,3 +54,13 @@ function processAll() {
         });
     });
 }
+
+function clearResult() {
+    $('#table-user td input').each(function (i, elem) {
+        var tr = $(elem).closest('tr');
+        var id = tr.find('td:eq(1)').text();
+        var lastTd = tr.find('td:last-child');
+        lastTd.html('<i class="fa fa-info icon-button" data-toggle="tooltip" title="Delete" onclick="sendRequest(' + id + ');"></i>');
+        $('[data-toggle="tooltip"]').tooltip();
+    });
+}
