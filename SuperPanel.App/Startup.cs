@@ -1,14 +1,18 @@
 using Bogus;
+using ExternalResource;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using SuperPanel.App.Data;
 using SuperPanel.App.Infrastructure;
+using SuperPanel.App.Middleware;
 using SuperPanel.App.Models;
 using System;
 using System.Linq;
+using System.Net.Http;
 using System.Text.Json;
 
 namespace SuperPanel.App
@@ -34,6 +38,12 @@ namespace SuperPanel.App
 
             // Data
             services.AddSingleton<IUserRepository, UserRepository>();
+            services.AddSingleton<IClient, Client>();
+
+            var baseAddress = Configuration.GetSection("ApiSetting").GetSection("BaseAddress").Value;
+            services.AddTransient(a => new HttpClient() { BaseAddress = new Uri(baseAddress) });
+
+
         }
 
 
@@ -50,6 +60,7 @@ namespace SuperPanel.App
                 // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
                 app.UseHsts();
             }
+            app.UseAjaxMiddleware();
             app.UseHttpsRedirection();
             app.UseStaticFiles();
 
